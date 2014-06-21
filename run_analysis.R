@@ -90,3 +90,4 @@ v_s <- cbind(feature=feature_label[,2],v_sub)
 
 tidyData <- cbind(v_a,v_s[,2:ncol(v_s)])
 write.table(tidyData,file="tidyData.txt",sep=",",row.names = FALSE)
+# ------------------------------------------------------------------------------
