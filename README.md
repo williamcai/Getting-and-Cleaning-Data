@@ -1,45 +1,39 @@
-# Description of program
+## Description of program
  Requirements:
- 1.Merges the training and the test sets to create one data set.
- 2.Extracts only the measurements on the mean and standard deviation for each 
-   measurement. 
- 3.Uses descriptive activity names to name the activities in the data set
- 4.Appropriately labels the data set with descriptive variable names. 
- 5.Creates a second, independent tidy data set with the average of each 
-   variable for each activity and each subject. 
+ <ol>
+ <li>Merges the training and the test sets to create one data set.</li>
+ <li>Extracts only the measurements on the mean and standard deviation for each measurement. </li>
+ <li>Uses descriptive activity names to name the activities in the data set.</li>
+ <li>Appropriately labels the data set with descriptive variable names.</li>
+ <li>Creates a second, independent tidy data set with the average of each variable for each activity and each subject.</li>
+ </ol>
 
----------------------------------------------------------------------------
+## loading data
 read activity labels
 read features names
----------------------------------------------------------------------------
+
 read training data set 
-	data:    X_train.txt
-	activity:y_train.txt
-	subject :subject_train.txt
+* data     : X_train.txt
+* activity : y_train.txt
+* subject  : subject_train.txt
 merge descriptive activity names to name the activities in the data set
 make train data all in one
 label each variable names
----------------------------------------------------------------------------
+
 read test data set
-	data:    X_test.txt
-	activity:y_test.txt
-	subject :subject_test.txt
+* data     : X_test.txt
+* activity : y_test.txt
+* subject  : subject_test.txt
 merge descriptive activity names to name the activities in the data set
 make test data all in one
 label each variable names
----------------------------------------------------------------------------
-Merges the training and the test sets to create one data set.
----------------------------------------------------------------------------
 
----------------------------------------------------------------------------
-Extracts only the measurements on the mean and standard deviation for each 
-  measurement. 
-  (Hardcoding)
----------------------------------------------------------------------------
+## Merges the training and the test sets to create one data set.
 
----------------------------------------------------------------------------
-Creates a second, independent tidy data set with the average of each 
-  variable for each activity and each subject. 
----------------------------------------------------------------------------
-Output tidyData
----------------------------------------------------------------------------
+## Extracts only the measurements on the mean and standard deviation for each measurement. 
+  (This part hardcoding)
+
+## Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+## Output tidyData
+
