@@ -63,10 +63,11 @@ data <- data.frame(rbind(data1,data2))
 # 2.Extracts only the measurements on the mean and standard deviation for each 
 #   measurement. 
 # ------------------------------------------------------------------------------
-subsetData <- data[,c(1:6,41:46,81:86,121:126,161:166,
-                      201:202,214:215,227:228,240:241,253:254,
-                      266:271,345:350,424:429,
-                      503:504,516:517,529:530,542:543)]
+sub <- c(grep("mean",feature_label[,2]),
+         grep("std",feature_label[,2]))
+subsetData <- data[,sub]
+subsetData$subject  <- data$subject
+subsetData$activity <- data$activity
 
 # ------------------------------------------------------------------------------
 # 5.Creates a second, independent tidy data set with the average of each 
@@ -74,14 +75,14 @@ subsetData <- data[,c(1:6,41:46,81:86,121:126,161:166,
 # ------------------------------------------------------------------------------
 v_sub <- data.frame()
 v_act <- data.frame()
-v_col <- length(data)-2
+v_col <- ncol(subsetData)-2
 
 for (i in 1:v_col) {
-  v_sub <- rbind(v_sub,tapply(data[,i],data$subject,mean))
-  v_act <- rbind(v_act,tapply(data[,i],data$activity,mean))
+  v_sub <- rbind(v_sub,tapply(subsetData[,i],subsetData$subject,mean))
+  v_act <- rbind(v_act,tapply(subsetData[,i],subsetData$activity,mean))
   if (i == v_col) {
-    names(v_sub) <- names(tapply(data[,i],data$subject,mean))
-    names(v_act) <- names(tapply(data[,i],data$activity,mean))
+    names(v_sub) <- names(tapply(subsetData[,i],subsetData$subject,mean))
+    names(v_act) <- names(tapply(subsetData[,i],subsetData$activity,mean))
   }
 }
 v_a <- cbind(feature=feature_label[,2],v_act)
