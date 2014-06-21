@@ -30,29 +30,13 @@ label each variable names
 
 ## processing data
 Merges the training and the test sets to create one data set.
-<<<<<<< HEAD
 ---------------------------------------------------------------------------
-
----------------------------------------------------------------------------
-Extracts only the measurements on the mean and standard deviation for each 
-  measurement. 
+Extracts only the measurements on the mean and standard deviation for each measurement. 
   grep feature label for "mean" and "std"
 ---------------------------------------------------------------------------
-
----------------------------------------------------------------------------
-Creates a second, independent tidy data set with the average of each 
-  variable for each activity and each subject. 
----------------------------------------------------------------------------
-Output tidyData
----------------------------------------------------------------------------
-=======
-
-Extracts only the measurements on the mean and standard deviation for each measurement. 
-  (This part hardcoding)
-
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 ## Output data
 write tidyData to a local file.
 
->>>>>>> 5f0d105c20897878499d17d62acfda24bf56d0c2
+
